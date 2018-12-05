@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular7-crud';
+  article =
+    {
+      id: 1,
+      title: 'Java Example',
+      category: 'Pragramming'
+    };
 }
