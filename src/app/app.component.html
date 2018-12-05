@@ -10,7 +10,7 @@
           <label for="title">article</label>
           <input type="text" class="form-control" [(ngModel)]="article.title" name="title" placeholder="title">
         </div>
-        <button type="button" class="btn btn-primary">add article</button>
+        <button type="button" (click)="add(article)" class="btn btn-primary">add article</button>
       </form>
     </div>
   </div>
@@ -22,11 +22,13 @@
           <th>id</th>
           <th>category</th>
           <th>title</th>
+          <th></th>
         </tr>
         <tr *ngFor="let article of articles">
           <td>{{ article.id }}</td>
           <td>{{ article.category }}</td>
           <td>{{ article.title }}</td>
+          <td><button (click)="delele(article.id)" class="btn btn-danger">ลบ</button></td>
         </tr>
       </table>
     </div>

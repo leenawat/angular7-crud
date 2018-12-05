@@ -8,9 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   article =
     {
-      id: 1,
-      title: 'Java Example',
-      category: 'Pragramming'
+      title: '',
+      category: ''
     };
 
   articles = [
@@ -24,4 +23,22 @@ export class AppComponent {
       category: 'Pragramming'
     },
   ];
+
+  add(article) {
+    const maxId = Math.max(...this.articles.map(obj => obj.id), 0);
+    const newArticle = Object.assign({}, article, { id: maxId + 1 });
+    this.articles.push(newArticle);
+    this.article = {
+      title: '',
+      category: ''
+    };
+  }
+
+  delele(id) {
+    this.articles.map((obj, index) => {
+      if (obj.id === id) {
+        this.articles.splice(index, 1);
+      }
+    });
+  }
 }
