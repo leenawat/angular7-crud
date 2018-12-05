@@ -12,4 +12,16 @@ export class AppComponent {
       title: 'Java Example',
       category: 'Pragramming'
     };
+
+  articles = [
+    {
+      id: 1,
+      title: 'Java Example',
+      category: 'Pragramming'
+    }, {
+      id: 2,
+      title: 'Nodejs For Beginner',
+      category: 'Pragramming'
+    },
+  ];
 }

@@ -11,4 +11,18 @@
   <label>title:
     {{ article.title }}
   </label>
+  <div>
+    <table  class="table">
+      <tr>
+        <th>id</th>
+        <th>category</th>
+        <th>title</th>
+      </tr>
+      <tr *ngFor="let article of articles">
+        <td>{{ article.id }}</td>
+        <td>{{ article.category }}</td>
+        <td>{{ article.title }}</td>
+      </tr>
+    </table>
+  </div>
 </div>
